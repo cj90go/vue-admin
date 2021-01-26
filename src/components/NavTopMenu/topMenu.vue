@@ -16,6 +16,7 @@
 <script>
 import { generateTitle } from '@/utils/i18n'
 import { mapGetters } from 'vuex'
+import { asyncRoutes } from '@/router'
 
 export default {
   data() {
@@ -52,7 +53,7 @@ export default {
     fetchNavData() {
       // 初始化菜单激活项
       const cur_path = this.$route.path // 获取当前路由
-      const routers = this.$store.getters.permission_routes // 获取路由对象
+      const routers = asyncRoutes // 获取路由对象
       let nav_type = ''; let nav_name = ''
       debugger
       for (var i = 0; i < routers.length; i++) {

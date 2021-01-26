@@ -108,18 +108,18 @@ export const asyncRoutes = [
       },
       {
         path: '/system/menu',
-        component: { template: '<div>sysmenu</div>' },
+        // component: { template: '<div>sysmenu</div>' },
         name: '系统管理',
-        meta: { title: 'system', icon: 'dashboard', noCache: true, affix: true },
+        meta: { title: 'system', icon: 'dashboard' },
         children: [
           {
-            path: 'menu1-2-1',
+            path: '/system/menu/menu1-2-1',
             component: { template: '<div>menu1-2-1</div>' },
             name: '系统管理',
             meta: { title: 'menu1-2-1' }
           },
           {
-            path: 'menu1-2-2',
+            path: '/system/menu/menu1-2-2',
             component: { template: '<div>menu1-2-2</div>' },
             name: '系统管理',
             meta: { title: 'menu1-2-2' }
